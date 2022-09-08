@@ -1,0 +1,15 @@
+.vertical-center {
+    align-content: center !important;
+    flex-wrap: wrap !important;
+    display: flex !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.bg-gray {
+    background-color: #c8d6e5;
+}
+
+.bg-waterfall {
+    background-image: linear-gradient(to top, #079992, #1dd1a1) !important;
+}
