@@ -1,0 +1,27 @@
+<form id="form-child" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="NAME" id="NAME" class="form-control">
+    </div>
+    <div class="form-group row">
+        <div class="col-12 col-sm-6 col-md-6">
+            <label>Nascimento</label>
+            <input type="date" name="NASCIMENTO" id="NASCIMENTO" class="form-control">
+        </div>
+        <div class="col-12 col-sm-6 col-md-6">
+            <label>Sexo</label>
+            <select name="SEXO" id="SEXO" class="form-control">
+                <option>Selecione...</option>
+                <option value="Male">Masculino</option>
+                <option value="Female">Feminino</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Local pertencente</label>
+        <select name="LOCAL_ID" id="LOCAL_ID" class="form-control">
+            <option value="">Selecione a instituição</option>
+        </select>
+    </div>
+    <input type="hidden" name="ID" id="ID">
+</form>

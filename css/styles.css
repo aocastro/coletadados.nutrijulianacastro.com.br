@@ -13,3 +13,11 @@
 .bg-waterfall {
     background-image: linear-gradient(to top, #079992, #1dd1a1) !important;
 }
+
+.icon-login {
+    font-size: 7rem !important;
+}
+
+.icon-brand {
+    font-size: 2rem !important;
+}

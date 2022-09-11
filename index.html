@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="libs/fontawesome/css/all.css">
+    <link rel="stylesheet" href="libs/sweetAlert/dist/sweetalert2.all.min.js">
 </head>
 
 <body class="bg-waterfall">
@@ -20,38 +21,48 @@
                 <div class="col-12 col-sm-6 col-md-5">
                     <div class="card shadow">
                         <div class="card-header text-center">
-                            <img src="img/brand.png" alt="Tupã 2030">
-                            <h5 class="text-dark">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <i class="fa-solid fa-file-pen icon-login"></i>
+                                    </div>
+                                    <div class="col-6">
+                                        <h4 class="text-dark mt-2">
+                                            Sistema para Censo Antropométrico
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="text-dar mt-4">
                                 Login do sistema
                             </h5>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form id="login">
                                 <div class="form-group">
                                     <label>Login</label>
                                     <input type="text" name="LOGIN" id="LOGIN" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input type="text" name="SENHA" id="SENHA" class="form-control">
+                                    <input type="password" name="PASS" id="PASS" class="form-control">
                                 </div>
                             </form>
                         </div>
                         <div class="card-footer">
-                            <a href="local">
-                                <button class="btn btn-primary btn-block">
-                                    <i class="fa-solid fa-right-to-bracket"></i> Acessar
-                                </button>
-                            </a>
+                            <button class="btn btn-primary btn-block btn-login">
+                                <i class="fa-solid fa-right-to-bracket"></i> Acessar
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="libs/sweetAlert/dist/sweetalert2.all.min.js"></script>
+        <script src="src/user/controller/login-user.js"></script>
 </body>
 
 </html>
