@@ -4,9 +4,9 @@
 
     $dados = array();
 
-    $sql = "SELECT c.ID, c.NAME, DATE_FORMAT(c.NASCIMENTO, '%d/%m/%Y') as NASCIMENTO , DATE_FORMAT(c2.`DATE`, '%d/%m/%Y')  as AVALIACAO
-    FROM CHILD c, CENSUS c2 
-    WHERE c2.CHILD_ID = c.ID AND c.LOCAL_ID = ".$_REQUEST['LOCAL_ID']."";
+    $sql = "SELECT c.ID, c.NAME, DATE_FORMAT(c.NASCIMENTO, '%d/%m/%Y') as NASCIMENTO
+            FROM CHILD c 
+            WHERE c.LOCAL_ID = ".$_REQUEST['LOCAL_ID']."";
 
     $resultado = $pdo->query($sql);
 
