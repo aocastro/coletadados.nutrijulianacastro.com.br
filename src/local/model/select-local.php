@@ -6,7 +6,9 @@
 
     $dados = array();
 
-    $sql = "SELECT * FROM LOCAL WHERE INSTITUICAO_ID = ".$_SESSION['INSTITUICAO_ID']."";
+    $sql = "SELECT *, (SELECT COUNT(ID) FROM CHILD c WHERE c.LOCAL_ID = l.INSTITUICAO_ID) as TOTAL
+            FROM `LOCAL` l
+            WHERE l.INSTITUICAO_ID = ".$_SESSION['INSTITUICAO_ID']."";
 
     $resultado = $pdo->query($sql);
 

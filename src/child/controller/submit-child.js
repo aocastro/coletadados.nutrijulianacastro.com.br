@@ -8,10 +8,6 @@ $(document).ready(function() {
 
         $('#principal').load('submit')
 
-        $('a').removeClass('active')
-
-        $('.breadcrumb').append(`<li class="breadcrumb-item active"><a href="submit">Coleta de dados</a></li>`)
-
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -28,7 +24,7 @@ $(document).ready(function() {
                     } else {
                         $('#SEXO').val('Femino')
                     }
-                    $('#ID').val(dado.dados.ID)
+                    $('#CHILD_ID').val(dado.dados.ID)
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert
                         title: 'Gerenciador Etec Cafelândia', // Título da janela SweetAler

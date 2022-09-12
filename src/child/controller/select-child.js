@@ -4,13 +4,11 @@ $(document).ready(function() {
 
         let dados = `LOCAL_ID=${$(this).attr('id')}`
 
+        localStorage.setItem('local', dados)
+
         $('#principal').empty()
 
         $('#principal').load('children')
-
-        $('a').removeClass('active')
-
-        $('.breadcrumb').append(`<li class="breadcrumb-item active"><a href="children">Crianças</a></li>`)
 
         $.ajax({
             type: 'POST',
@@ -35,7 +33,8 @@ $(document).ready(function() {
                                 </div>
                                 <div class="col-10 col-sm-9 col-md-9">
                                     <strong>Nome:</strong> ${dado.NAME} <br>
-                                    <strong>Nascimento: </strong> ${dado.NASCIMENTO} | <strong>${SEXO}</strong>
+                                    <strong>Nascimento: </strong> ${dado.NASCIMENTO} | <strong>${SEXO}</strong> <br>
+                                    <strong>Última avaliação: </strong> ${dado.AVALIACAO}
                                 </div>
                                 <div class="col-12 col-sm-2 col-md-2">
                                     <button id="${dado.ID}" class="btn btn-primary btn-block d-none d-md-block d-dm-block btn-submit">

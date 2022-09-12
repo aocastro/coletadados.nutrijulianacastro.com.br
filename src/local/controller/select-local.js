@@ -15,7 +15,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="col-10 col-sm-9 col-md-9">
                                     <strong>local:</strong> ${dado.NAME} <br>
-                                    <strong>Quantidade de crianças: </strong> ??
+                                    <strong>Quantidade de crianças: </strong> ${dado.TOTAL}
                                 </div>
                                 <div class="col-12 col-sm-2 col-md-2">
                                     <button id="${dado.ID}" class="btn btn-success btn-block d-none d-md-block d-dm-block btn-child">

@@ -14,6 +14,8 @@ $(document).ready(function() {
 
             if (dados.tipo === 'error') {
                 $(location).attr('href', 'index');
+            } else {
+                $('#logo').attr('src', 'src/institution/files/' + dados.logo)
             }
         }
     })

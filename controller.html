@@ -13,22 +13,28 @@
 
 <body class="bg-gray">
 
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="col-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item logout"><a>Sair</a></li>
-                        <li class="breadcrumb-item"><a href="local">Locais de Coleta</a></li>
-
-                        <!-- <li class="breadcrumb-item active" aria-current="page">Dados</li> -->
-                    </ol>
-                </nav>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow mb-5">
+        <img src="" alt="Logo" width="70" id="logo">
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="local"><i class="fa-solid fa-location-dot"></i> Locais de coleta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="children"><i class="fa-solid fa-children"></i> Crianças</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="submit"><i class="fa-solid fa-file-pen"></i> Coleta de dados</a>
+                </li>
+            </ul>
+            <a class="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair do sistema</a>
         </div>
-    </div>
+    </nav>
 
-    <div id="principal" class="container">
+    <div id="principal" class="container mt-5">
 
     </div>
 
