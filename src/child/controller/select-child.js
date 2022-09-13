@@ -11,10 +11,8 @@ function avaliation(child) {
         success: function(dado) {
             if (dado.tipo == "success") {
                 if (dado.dados.AVALIACAO == null) {
-                    console.log('Sem avaliação')
                     $('#avaliation' + child).append('Sem avaliação')
                 } else {
-                    console.log(dado.dados.AVALIACAO)
                     $('#avaliation' + child).append(dado.dados.AVALIACAO)
                 }
             } else {

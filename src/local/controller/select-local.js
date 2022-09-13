@@ -1,3 +1,17 @@
+function countChild(idLocal) {
+    let dados = `LOCAL_ID=${idLocal}`
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        assync: true,
+        data: dados,
+        url: 'src/child/model/count-child',
+        success: function(dado) {
+            $('#qtde' + idLocal).append(dado.dados.TOTAL)
+        }
+    })
+}
+
 $(document).ready(function() {
     $.ajax({
         type: 'POST',
@@ -15,7 +29,7 @@ $(document).ready(function() {
                                 </div>
                                 <div class="col-10 col-sm-9 col-md-9">
                                     <strong>local:</strong> ${dado.NAME} <br>
-                                    <strong>Quantidade de crianças: </strong> ${dado.TOTAL}
+                                    <strong>Quantidade de crianças: </strong> <span id="qtde${dado.ID}"></span>
                                 </div>
                                 <div class="col-12 col-sm-2 col-md-2">
                                     <button id="${dado.ID}" class="btn btn-success btn-block d-none d-md-block d-dm-block btn-child">
@@ -30,6 +44,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                 `)
+                countChild(dado.ID)
             }
             $('body').append(`<script src="src/child/controller/select-child.js"></script>`)
         }
