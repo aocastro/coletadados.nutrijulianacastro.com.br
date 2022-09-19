@@ -21,6 +21,7 @@ $(document).ready(function() {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/child/view/form-child', function() {
                         $('#NAME').val(dado.dados.NAME)
+                        $('#MOTHER').val(dado.dados.MOTHER)
                         $('#NASCIMENTO').val(dado.dados.NASCIMENTO)
                         $('#SEXO').empty()
                         if (dado.dados.SEXO == 'Male') {

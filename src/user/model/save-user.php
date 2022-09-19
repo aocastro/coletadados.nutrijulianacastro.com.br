@@ -15,13 +15,14 @@
 
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare('INSERT INTO USER (NAME, LOGIN, PASS, INSTITUICAO_ID, STATUS) VALUES (:a, :b, :c, :d, :e)');
+                $stmt = $pdo->prepare('INSERT INTO USER (NAME, LOGIN, PASS, INSTITUICAO_ID, STATUS, TYPE) VALUES (:a, :b, :c, :d, :e, :f)');
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NAME']),
                     ':b' => utf8_decode($requestData['LOGIN']),
                     ':c' => md5($requestData['PASS']),
                     ':d' => $requestData['INSTITUICAO_ID'],
-                    ':e' => '1'
+                    ':e' => '1',
+                    ':f' => $requestData['TYPE']
                 ));
                 $dados = array(
                     "tipo" => 'success',
@@ -35,13 +36,14 @@
             }
         } else {
             try{
-                $stmt = $pdo->prepare('UPDATE USER SET NAME = :a, LOGIN = :b, PASS = :c, INSTITUICAO_ID = :d WHERE ID = :id');
+                $stmt = $pdo->prepare('UPDATE USER SET NAME = :a, LOGIN = :b, PASS = :c, INSTITUICAO_ID = :d, TYPE = :e WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NAME']),
                     ':b' => utf8_decode($requestData['LOGIN']),
                     ':c' => md5($requestData['PASS']),
-                    ':d' => $requestData['INSTITUICAO_ID']
+                    ':d' => $requestData['INSTITUICAO_ID'],
+                    ':e' => $requestData['TYPE']
                 ));
                 $dados = array(
                     "tipo" => 'success',

@@ -38,6 +38,14 @@ $(document).ready(function() {
                                 }
                             }
                         })
+                        $('#TYPE').empty()
+                        if (dado.dados.TYPE == '1') {
+                            $('#TYPE').append(`<option value="1" selected>Administrador</option>`)
+                            $('#TYPE').append(`<option value="2">Recenseador</option>`)
+                        } else {
+                            $('#TYPE').append(`<option value="1">Administrador</option>`)
+                            $('#TYPE').append(`<option value="2" selecteed>Recenseador</option>`)
+                        }
                     })
                     $('.btn-save').show()
                     $('.btn-save').removeAttr('data-operation')

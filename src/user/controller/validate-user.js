@@ -16,6 +16,9 @@ $(document).ready(function() {
                 $(location).attr('href', 'index');
             } else {
                 $('#logo').attr('src', 'src/institution/files/' + dados.logo)
+                if (dados.acesso === '2') {
+                    $('.system').hide()
+                }
             }
         }
     })

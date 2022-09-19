@@ -24,6 +24,8 @@ $(document).ready(function() {
                     $('.modal-body').load('src/child/view/form-child', function() {
                         $('#NAME').val(dado.dados.NAME)
                         $('#NAME').attr('readonly', 'true')
+                        $('#MOTHER').val(dado.dados.MOTHER)
+                        $('#MOTHER').attr('readonly', 'true')
                         $('#NASCIMENTO').val(dado.dados.NASCIMENTO)
                         $('#NASCIMENTO').attr('readonly', 'true')
                         $('#SEXO').empty()

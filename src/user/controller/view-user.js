@@ -42,6 +42,13 @@ $(document).ready(function() {
                                 }
                             }
                         })
+                        $('#TYPE').empty()
+                        if (dado.dados.TYPE == '1') {
+                            $('#TYPE').append(`<option value="1">Administrador</option>`)
+                        } else {
+                            $('#TYPE').append(`<option value="2">Recenseador</option>`)
+                        }
+                        $('#TYPE').attr('readonly', 'true')
                     })
                     $('.btn-save').hide()
                     $('#modal-user').modal('show')

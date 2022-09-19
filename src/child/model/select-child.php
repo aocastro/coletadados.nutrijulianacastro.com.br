@@ -4,7 +4,7 @@
 
     $dados = array();
 
-    $sql = "SELECT c.ID, c.NAME, DATE_FORMAT(c.NASCIMENTO, '%d/%m/%Y') as NASCIMENTO
+    $sql = "SELECT c.ID, c.NAME, DATE_FORMAT(c.NASCIMENTO, '%d/%m/%Y') as NASCIMENTO, SEXO, MOTHER
             FROM CHILD c 
             WHERE c.LOCAL_ID = ".$_REQUEST['LOCAL_ID']."";
 

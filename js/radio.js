@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-    $('#idade').hide()
+    if ($('#TRUE').prop('checked') == true) {
+        $('#idade').show()
+    } else {
+        $('#idade').hide()
+    }
 
     $('input[name=PREMATURO]').on('change', function() {
         let option = $(this).val()

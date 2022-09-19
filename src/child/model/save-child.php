@@ -15,13 +15,14 @@
 
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare('INSERT INTO CHILD (NAME, NASCIMENTO, SEXO, STATUS, LOCAL_ID) VALUES (:a, :b, :c, :d, :e)');
+                $stmt = $pdo->prepare('INSERT INTO CHILD (NAME, MOTHER, NASCIMENTO, SEXO, STATUS, LOCAL_ID) VALUES (:a, :b, :c, :d, :e, :f)');
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NAME']),
-                    ':b' => $requestData['NASCIMENTO'],
-                    ':c' => $requestData['SEXO'],
-                    ':d' => '1',
-                    ':e' => $requestData['LOCAL_ID']
+                    ':b' => utf8_decode($requestData['MOTHER']),
+                    ':c' => $requestData['NASCIMENTO'],
+                    ':d' => $requestData['SEXO'],
+                    ':e' => '1',
+                    ':f' => $requestData['LOCAL_ID']
                 ));
                 $dados = array(
                     "tipo" => 'success',
@@ -35,13 +36,14 @@
             }
         } else {
             try{
-                $stmt = $pdo->prepare('UPDATE CHILD SET NAME = :a, NASCIMENTO = :b, SEXO = :c, LOCAL_ID = :d  WHERE ID = :id');
+                $stmt = $pdo->prepare('UPDATE CHILD SET NAME = :a, MOTHER = :b, NASCIMENTO = :c, SEXO = :d, LOCAL_ID = :e  WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NAME']),
-                    ':b' => $requestData['NASCIMENTO'],
-                    ':c' => $requestData['SEXO'],
-                    ':d' => $requestData['LOCAL_ID']
+                    ':b' => utf8_decode($requestData['MOTHER']),
+                    ':c' => $requestData['NASCIMENTO'],
+                    ':d' => $requestData['SEXO'],
+                    ':e' => $requestData['LOCAL_ID']
                 ));
                 $dados = array(
                     "tipo" => 'success',

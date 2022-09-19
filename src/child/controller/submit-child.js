@@ -24,6 +24,13 @@ $(document).ready(function() {
                     } else {
                         $('#SEXO').val('Femino')
                     }
+
+                    if (dado.dados.PREMATURO === 'true') {
+                        $('#TRUE').attr('checked', 'true')
+                        $('#IDADE_GEST').val(dado.dados.IDADE_GEST)
+                        $('#idade').show()
+                    }
+
                     $('#CHILD_ID').val(dado.dados.ID)
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert

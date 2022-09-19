@@ -26,7 +26,8 @@
             $dados = array(
                 'tipo' => 'success',
                 'mensagem' => 'Seja bem vindo, '.$_SESSION['NAME'].' ao sistema para coleta de dados antropométricos.',
-                'logo'=> $LOGO
+                'logo'=> $LOGO,
+                'acesso'=> $_SESSION['TYPE']
             );
         } else {
             $dados = array(
