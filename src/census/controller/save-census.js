@@ -50,6 +50,8 @@ function loadLocal() {
 
 $(document).ready(function() {
 
+    $('#loading').modal('hide')
+
     $('.btn-save').click(function(e) {
         e.preventDefault()
 

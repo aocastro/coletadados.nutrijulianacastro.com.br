@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
+    $('#loading').modal('hide')
+    
     $('.btn-submit').click(function() {
+
+        $('#loading').modal('show')
 
         let dados = `ID=${$(this).attr('id')}`
 

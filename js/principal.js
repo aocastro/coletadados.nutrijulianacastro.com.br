@@ -7,5 +7,6 @@ $(document).ready(function() {
         console.log(url)
         $('#principal').empty()
         $('#principal').load(url)
+        $('#my-nav').removeClass('show')
     })
 })

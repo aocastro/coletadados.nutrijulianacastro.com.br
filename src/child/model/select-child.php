@@ -6,7 +6,8 @@
 
     $sql = "SELECT c.ID, c.NAME, DATE_FORMAT(c.NASCIMENTO, '%d/%m/%Y') as NASCIMENTO, SEXO, MOTHER
             FROM CHILD c 
-            WHERE c.LOCAL_ID = ".$_REQUEST['LOCAL_ID']."";
+            WHERE c.LOCAL_ID = ".$_REQUEST['LOCAL_ID']."
+            ORDER BY c.NAME ASC";
 
     $resultado = $pdo->query($sql);
 

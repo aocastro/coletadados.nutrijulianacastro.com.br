@@ -14,7 +14,8 @@ function avaliation(child) {
                     $('#avaliation' + child).append('Sem avaliação')
                 } else {
                     $('#avaliation' + child).append(dado.dados.AVALIACAO)
-                    $('#child' + child).addClass('bg-success')
+                    $('#child' + child).addClass('bg-primary')
+                    $('#child' + child).addClass('text-white')
                 }
             } else {
                 Swal.fire({ // Inicialização do SweetAlert
@@ -30,7 +31,11 @@ function avaliation(child) {
 
 $(document).ready(function() {
 
+    $('#loading').modal('hide')
+    
     $('.btn-child').click(function() {
+
+        $('#loading').modal('show')
 
         let dados = `LOCAL_ID=${$(this).attr('id')}`
 
