@@ -1,0 +1,57 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-12 col-sm-8 col-md-8 mt-5">
+        <div class="card shadow">
+            <div class="card-header text-center">
+                <h4 class="text-danger">
+                    Coleta de dados antropométricos
+                </h4>
+            </div>
+            <div class="card-body">
+                <form id="form-census">
+                    <div class="form-group">
+                        <label>Nome da criança</label>
+                        <input type="text" name="NAME" id="NAME" class="form-control" disabled>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <label>Nascimento</label>
+                            <input type="date" name="NASCIMENTO" id="NASCIMENTO" class="form-control" disabled>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <label>Sexo</label>
+                            <input type="text" name="SEXO" id="SEXO" class="form-control" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <label>Altura</label>
+                            <input type="number" step="any" name="HEIGHT" id="HEIGHT" class="form-control">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <label>Peso</label>
+                            <input type="number" step="any" name="WEIGHT" id="WEIGHT" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Criança prematura ?</label>
+                        <input type="radio" name="PREMATURO" id="TRUE" value="true" class="ml-3"> Sim
+                        <input type="radio" name="PREMATURO" id="FALSE" value="false" class="ml-3"> Não
+                    </div>
+                    <div id="idade" class="form-group">
+                        <label>Informe a idade gestacional</label>
+                        <input type="number" name="IDADE_GEST" id="IDADE_GEST" class="form-control">
+                    </div>
+                    <input type="hidden" name="CHILD_ID" id="CHILD_ID">
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success btn-block p-3 btn-save" data-operation="insert">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/census/controller/save-census.js"></script>
+<script src="js/radio.js"></script>

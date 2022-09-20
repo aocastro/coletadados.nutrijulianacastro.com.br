@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta de dados</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.css">
+</head>
+
+<body class="bg-gray">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow mb-5">
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="" alt="Logo" width="70" id="logo">
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link principal" href="local"><i class="fa-solid fa-location-dot"></i> Locais de coleta</a>
+                </li>
+                <li class="nav-item system">
+                    <a class="nav-link" href="system"><i class="fa-solid fa-gear"></i> Sistema gestor</a>
+                </li>
+            </ul>
+            <a class="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair do sistema</a>
+        </div>
+    </nav>
+
+    <div id="principal" class="container mt-5">
+
+    </div>
+
+    <div id="loading" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content loading">
+                <div class="modal-body loading">
+                    <h4 class="text-white text-center">
+                        <i class="fa-solid fa-cog fa-spin"></i> Aguarde carregando ...
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="libs/sweetAlert/dist/sweetalert2.all.min.js"></script>
+    <script src="src/user/controller/validate-user.js"></script>
+    <script src="src/user/controller/logout-user.js"></script>
+    <script src="js/principal.js"></script>
+</body>
+
+</html>

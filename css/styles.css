@@ -1,0 +1,36 @@
+.vertical-center {
+    align-content: center !important;
+    flex-wrap: wrap !important;
+    display: flex !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.bg-gray {
+    background-color: #c8d6e5;
+}
+
+.bg-waterfall {
+    background-image: linear-gradient(to top, #079992, #1dd1a1) !important;
+}
+
+.icon-login {
+    font-size: 7rem !important;
+}
+
+.icon-brand {
+    font-size: 2rem !important;
+}
+
+a {
+    color: #000 !important;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.loading {
+    background: transparent !important;
+    border: none!important;
+}

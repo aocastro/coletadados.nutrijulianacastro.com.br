@@ -1,6 +1,6 @@
 # Build and Release Folders
 vscode/
-
+src/conexao/
 # Executables
 *.json
 
