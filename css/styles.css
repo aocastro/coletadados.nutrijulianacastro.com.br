@@ -25,12 +25,3 @@
 a {
     color: #000 !important;
 }
-
-.logout {
-    cursor: pointer;
-}
-
-.loading {
-    background: transparent !important;
-    border: none!important;
-}

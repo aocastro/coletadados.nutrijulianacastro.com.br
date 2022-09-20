@@ -6,28 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-Atropometric</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="libs/sweetAlert/dist/sweetalert2.all.min.js">
-
-    <script>
-        if ("serviceWorker" in navigator) {
-            if (navigator.serviceWorker.controller) {
-                console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
-            } else {
-                navigator.serviceWorker
-                    .register("./sw.js", {
-                        scope: "./"
-                    })
-                    .then(function(reg) {
-                        console.log("[Aplicativo] O trabalhador do serviço foi registrado para o escopo: " + reg.scope);
-                    });
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-waterfall">
@@ -42,15 +24,12 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-6">
-                                        <img class="img-fluid" src="img/logo.png" alt="e-Atropometric">
+                                        <i class="fa-solid fa-file-pen icon-login"></i>
                                     </div>
                                     <div class="col-6">
-                                        <h5 class="text-dark mt-5 d-none d-sm-block">
+                                        <h5 class="text-dark mt-2">
                                             Sistema para Censo Antropométrico
                                         </h5>
-                                        <h6 class="text-dark mt-5 d-block d-sm-none">
-                                            Sistema para Censo Antropométrico
-                                        </h6>
                                     </div>
                                 </div>
                             </div>
@@ -76,15 +55,6 @@
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid fixed-bottom">
-            <div class="row">
-                <div class="col-12 text-center text-white">
-                    Todos os direitos reservados. <br>
-                    Desenvolvido com <i class="fa-solid fa-heart"></i> por: adrianoCastro
                 </div>
             </div>
         </div>

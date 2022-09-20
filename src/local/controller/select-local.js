@@ -13,7 +13,6 @@ function countChild(idLocal) {
 }
 
 $(document).ready(function() {
-    $('#loading').modal('show')
     $.ajax({
         type: 'POST',
         dataType: 'json',

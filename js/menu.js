@@ -8,7 +8,6 @@ $(document).ready(function() {
         $('#content').empty()
 
         $('#content').load(url)
-        $('#my-nav').removeClass('show')
     })
 
 })
