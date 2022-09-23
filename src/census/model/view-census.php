@@ -4,7 +4,7 @@
 
     $ID = $_REQUEST['ID'];
 
-    $sql = "SELECT DATE_FORMAT(`DATE`, '%d/%m/%y') as AVALIACAO  FROM CENSUS c WHERE CHILD_ID = $ID";
+    $sql = "SELECT *, DATE_FORMAT(`DATE`, '%d/%m/%y') as AVALIACAO  FROM CENSUS c WHERE CHILD_ID = $ID";
 
     $resultado = $pdo->query($sql);
 

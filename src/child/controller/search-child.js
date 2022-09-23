@@ -13,7 +13,7 @@ function avaliation(child) {
                 if (dado.dados.AVALIACAO == null) {
                     $('#avaliation' + child).append('Sem avaliação')
                 } else {
-                    $('#avaliation' + child).append(dado.dados.AVALIACAO)
+                    $('#avaliation' + child).append(`${dado.dados.AVALIACAO}<br><strong>Peso: </strong> ${dado.dados.WEIGHT} <strong>Altura: </strong> ${dado.dados.HEIGHT}`)
                     $('#child' + child).addClass('bg-primary')
                     $('#child' + child).addClass('text-white')
                 }
@@ -32,21 +32,21 @@ function avaliation(child) {
 $(document).ready(function() {
 
     $('#loading').modal('hide')
-    
+
     $('#SEARCH').keyup(function(e) {
 
         e.preventDefault()
 
-        if($('#SEARCH').val().length > 2 ){
+        if ($('#SEARCH').val().length > 2) {
 
             // $('#loading').modal('show')
-    
+
             let dados = $('#search').serialize()
-    
+
             dados += `&${localStorage.getItem('local')}`
-    
+
             $('#child').empty()
-    
+
             console.log(dados)
 
             $.ajax({
@@ -66,7 +66,7 @@ $(document).ready(function() {
                             SEXO = 'Feminino'
                             ICON = '<i class="fa-solid fa-child-dress"></i>'
                         }
-    
+
                         $('#child').append(`
                         <div id="child${dado.ID}" class="card p-2 shadow mt-3">
                             <div class="container-fluid">

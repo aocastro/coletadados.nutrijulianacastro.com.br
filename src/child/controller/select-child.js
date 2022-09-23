@@ -13,7 +13,7 @@ function avaliation(child) {
                 if (dado.dados.AVALIACAO == null) {
                     $('#avaliation' + child).append('Sem avaliação')
                 } else {
-                    $('#avaliation' + child).append(dado.dados.AVALIACAO)
+                    $('#avaliation' + child).append(`${dado.dados.AVALIACAO}<br><strong>Peso: </strong> ${dado.dados.WEIGHT} <strong>Altura: </strong> ${dado.dados.HEIGHT}`)
                     $('#child' + child).addClass('bg-primary')
                     $('#child' + child).addClass('text-white')
                 }
@@ -32,7 +32,7 @@ function avaliation(child) {
 $(document).ready(function() {
 
     $('#loading').modal('hide')
-    
+
     $('.btn-child').click(function() {
 
         $('#loading').modal('show')
