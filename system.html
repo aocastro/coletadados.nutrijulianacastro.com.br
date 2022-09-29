@@ -44,9 +44,37 @@
 
     <div class="container mt-5" id="content">
         <div class="row mt-5">
-            <div class="col-12">
-                <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia veritatis nemo perspiciatis rerum commodi quibusdam voluptates magni nostrum. Vitae molestias culpa, autem delectus aut dolorum quos perspiciatis laudantium quam earum!</span><span>Consequatur perferendis asperiores ipsam vel veritatis nemo, corrupti veniam laborum velit ex ratione tempore modi quasi blanditiis ipsa, omnis eligendi excepturi autem aperiam doloremque facilis! Reprehenderit non vitae dolorum sapiente.</span><span>Modi tempore minima consequatur dignissimos sequi error omnis, vero reprehenderit cupiditate animi vel perferendis impedit facere assumenda similique ipsam eveniet porro earum, accusamus exercitationem, voluptates commodi non sapiente! Incidunt, repudiandae?</span><span>Aperiam qui optio cumque repellendus ab veritatis porro dolores tenetur perferendis aliquam debitis, earum laboriosam voluptas, dolorem unde aliquid sed sit accusantium neque placeat et autem sint. Quo, sed perspiciatis.</span><span>Exercitationem obcaecati vel, sit illum optio, architecto blanditiis mollitia nisi iusto earum perspiciatis modi similique laborum cum in quas beatae maiores a facere. Sed, temporibus est dolorem minima ex excepturi.</span></p>
+
+            <div class="col-12 col-sm-6 col-md-4 mt-5">
+                <div class="card shadow">
+                    <img class="card-img-top p-4" src="img/local.png" alt="Locais de coleta">
+                    <div class="card-body p-4">
+                        <h1 id="TOTALLOCAL" class="card-title text-center"></h1>
+                        <p class="card-text text-center">Locais cadastrados</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mt-5">
+                <div class="card shadow">
+                    <img class="card-img-top p-4" src="img/child.png" alt="Crianças cadastradas">
+                    <div class="card-body p-4">
+                        <h1 id="TOTALCHILD" class="card-title text-center"></h1>
+                        <p class="card-text text-center">Crianças cadastrados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mt-5">
+                <div class="card shadow">
+                    <img class="card-img-top p-4" src="img/dieta.png" alt="Coleta realizada">
+                    <div class="card-body p-4">
+                        <h1 id="TOTALCENSUS" class="card-title text-center"></h1>
+                        <p class="card-text text-center">Avaliações realizadas</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -58,6 +86,7 @@
     <script src="js/menu.js"></script>
     <script src="src/user/controller/validate-user.js"></script>
     <script src="src/user/controller/logout-user.js"></script>
+    <script src="src/census/controller/dashboard.js"></script>
 </body>
 
 </html>
