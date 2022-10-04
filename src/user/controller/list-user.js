@@ -9,6 +9,7 @@ $(document).ready(function() {
         "language": {
             "url": "libs/DataTables/pt_br.json"
         },
+        "order": [0, 'desc'],
         "columns": [{
                 "data": 'ID',
                 "className": 'text-center'

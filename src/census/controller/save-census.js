@@ -16,6 +16,7 @@ function avaliation(child) {
                     $('#avaliation' + child).append(`${dado.dados.AVALIACAO}<br><strong>Peso: </strong> ${dado.dados.WEIGHT} <strong>Altura: </strong> ${dado.dados.HEIGHT}`)
                     $('#child' + child).addClass('bg-primary')
                     $('#child' + child).addClass('text-white')
+                    $$('#botoes' + child).hide()
                 }
             } else {
                 Swal.fire({ // Inicialização do SweetAlert
@@ -62,7 +63,7 @@ function loadLocal() {
                                 <strong>Nome da mãe: </strong> ${dado.MOTHER} <br>
                                 <strong>Última avaliação: </strong> <span id="avaliation${dado.ID}"></span>
                             </div>
-                            <div class="col-12 col-sm-2 col-md-2">
+                            <div id="botoes${dado.ID}" class="col-12 col-sm-2 col-md-2">
                                 <button id="${dado.ID}" class="btn btn-primary btn-block d-none d-md-block d-dm-block btn-submit">
                                         <h1><i class="fa-solid fa-play"></i></h1>
                                 </button>
