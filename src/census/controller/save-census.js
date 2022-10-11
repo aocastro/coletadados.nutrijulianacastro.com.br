@@ -86,6 +86,8 @@ $(document).ready(function() {
 
     $('#loading').modal('hide')
 
+    $('#HEIGHT').focus()
+
     $('.btn-save').click(function(e) {
         e.preventDefault()
 
@@ -108,7 +110,8 @@ $(document).ready(function() {
                     title: 'Censo Antropométrico',
                     text: dados.mensagem,
                     icon: dados.tipo,
-                    confirmButtonText: 'OK'
+                    timer: 2000,
+                    showConfirmButton: false
                 })
 
                 loadLocal()

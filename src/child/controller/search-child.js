@@ -34,6 +34,8 @@ $(document).ready(function() {
 
     $('#loading').modal('hide')
 
+    $('#SEARCH').focus()
+
     $('#SEARCH').keyup(function(e) {
 
         e.preventDefault()

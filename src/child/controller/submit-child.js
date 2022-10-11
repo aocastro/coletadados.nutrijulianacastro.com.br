@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('#loading').modal('hide')
-    
+
     $('.btn-submit').click(function() {
 
         $('#loading').modal('show')
@@ -36,6 +36,7 @@ $(document).ready(function() {
                     }
 
                     $('#CHILD_ID').val(dado.dados.ID)
+
                 } else {
                     Swal.fire({ // Inicialização do SweetAlert
                         title: 'Gerenciador Etec Cafelândia', // Título da janela SweetAler
